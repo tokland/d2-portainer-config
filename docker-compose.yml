@@ -34,7 +34,7 @@ services:
         labels:
             - "com.eyeseetea.image-name=${DHIS2_DATA_IMAGE}"
         ports:
-            - "${PORT-8080}:80"
+            - "${PORT:-8080}:80"
         volumes:
             - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
             - ./config/50x.html:/usr/share/nginx/html/50x.html:ro
