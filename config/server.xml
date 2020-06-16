@@ -22,7 +22,7 @@
 		    proxyPort="443"
 		    scheme="https"
 		    secure="true"
-		    proxyName="extranet.who.int"
+		    proxyName="extranet-uat.who.int"
                     connectionTimeout="20000"
                     redirectPort="8443"
                     URIEncoding="UTF-8"
