@@ -33,6 +33,7 @@ services:
         image: "jwilder/nginx-proxy:alpine"
         labels:
             - "com.eyeseetea.image-name=${DHIS2_DATA_IMAGE}"
+            - "com.eyeseetea.deploy-path=${DEPLOY_PATH}"
         ports:
             - "${PORT:-8080}:80"
         volumes:
