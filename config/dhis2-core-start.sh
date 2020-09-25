@@ -13,7 +13,7 @@ set -e -u -o pipefail
 
 export PGPASSWORD="dhis"
 
-dhis2_url="http://localhost:8080/gmpwmr"
+dhis2_url="http://localhost:8080/dhis2-cont"
 psql_cmd="psql -v ON_ERROR_STOP=0 --quiet -h db -U dhis dhis2"
 pgrestore_cmd="pg_restore -h db -U dhis -d dhis2"
 configdir="/config"
