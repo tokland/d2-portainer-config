@@ -9,11 +9,13 @@ set -e -u -o pipefail
 #   - Run post-tomcat shell scripts
 #
 
-# Global LOAD_FROM_DATA="yes" | "no"
+# Globals:
+#   LOAD_FROM_DATA="yes" | "no"
+#   DHIS2_CONTEXT=my-prefix-path
 
 export PGPASSWORD="dhis"
 
-dhis2_url="http://localhost:8080/dhis2-ento-vc"
+dhis2_url="http://localhost:8080/${DHIS2_CONTEXT:-}"
 psql_cmd="psql -v ON_ERROR_STOP=0 --quiet -h db -U dhis dhis2"
 pgrestore_cmd="pg_restore -h db -U dhis -d dhis2"
 configdir="/config"

@@ -11,7 +11,7 @@ services:
             - "${SCRIPTS_DIR}:/data/scripts"
             - "${POST_SQL_DIR}:/data/db/post"
         environment:
-            CATALINA_OPTS: "-Dcontext.path=/dhis2-ento-vc/"
+            CATALINA_OPTS: "-Dcontext.path=${DHIS2_CONTEXT}"
             JAVA_OPTS: "-Xmx7500m -Xms4000m"
             LOAD_FROM_DATA: "${LOAD_FROM_DATA}"
         entrypoint: sh /config/dhis2-core-entrypoint.sh
