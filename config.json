@@ -1,0 +1,39 @@
+{
+    "urlMappings": [
+        {
+            "name": "honduras",
+            "url": "https://dev.eyeseetea.com/honduras",
+            "port": 8070
+        },
+        {
+            "name": "venezuela",
+            "url": "https://dev.eyeseetea.com/venezuela",
+            "port": 8071
+        },
+        {
+            "name": "nrc",
+            "url": "https://dev.eyeseetea.com/nrc",
+            "port": 8080
+        },
+        {
+            "name": "who-dev",
+            "url": "https://dev.eyeseetea.com/who-dev",
+            "port": 8084
+        },
+        {
+            "name": "who-discovery",
+            "url": "https://dev.eyeseetea.com/who-discovery",
+            "port": 8081
+        },
+        {
+            "name": "msf",
+            "url": "https://dev.eyeseetea.com/msf",
+            "port": 8088
+        },
+        {
+            "name": "samaritans",
+            "url": "https://dev.eyeseetea.com/samaritans",
+            "port": 8087
+        }
+    ]
+}
