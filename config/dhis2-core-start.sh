@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 set -e -u -o pipefail
 #
 # Tasks:
@@ -25,6 +25,8 @@ root_db_path="/data/db"
 post_db_path="/data/db/post"
 source_apps_path="/data/apps"
 dest_apps_path="/DHIS2_home/files/"
+
+LOAD_FROM_DATA="yes"
 
 debug() {
     echo "[dhis2-core-start] $*" >&2
