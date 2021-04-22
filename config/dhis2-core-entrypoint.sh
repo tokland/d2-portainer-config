@@ -20,24 +20,24 @@ install_packages() {
 
 if [ "$(id -u)" = "0" ]; then
     # Custom
-    install_packages $PACKAGES
-    
+    # install_packages $PACKAGES
+
     if [ -f $WARFILE ]; then
         # Custom: mkdir + add -q to avoid noise in the console
         mkdir -p $TOMCATDIR/webapps/ROOT
         unzip -n -q $WARFILE -d $TOMCATDIR/webapps/ROOT
         rm $WARFILE
     fi
-    
+
     # dhis2/core 2.31 images do not have user tomcat, don't fail in this case
-    
+
     if getent group tomcat; then
         chown -R root:tomcat $TOMCATDIR
         # Custom. Before: u+rwX,g+rX,o-rwx
         chmod -R u+rwX,g+rwX,o-rwx $TOMCATDIR
         chown -R tomcat:tomcat $TOMCATDIR/temp \
-        $TOMCATDIR/work \
-        $TOMCATDIR/logs
+            $TOMCATDIR/work \
+            $TOMCATDIR/logs
         chown -R tomcat:tomcat $DHIS2HOME
         chmod +x "$0" || true
         exec su-exec tomcat "$0" "$@"
